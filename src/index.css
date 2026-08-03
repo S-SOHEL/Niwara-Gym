@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Swiper custom styling for dark neon theme */
+.swiper-pagination {
+  position: relative !important;
+  bottom: 0 !important;
+  margin-top: 1.5rem !important;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.25) !important;
+  opacity: 0.8 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #CCFF00 !important;
+  width: 24px !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 0 12px rgba(204, 255, 0, 0.6) !important;
+}
+
+/* Custom scrollbar hiding helper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

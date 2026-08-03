@@ -1,0 +1,6 @@
+{
+  "name": "Niwara Gym Pune",
+  "description": "Luxury dark single-page high-conversion web experience for Niwara Gym in Navi Peth, Pune.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

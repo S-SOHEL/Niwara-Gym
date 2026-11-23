@@ -1,23 +1,63 @@
 @import "tailwindcss";
 
-/* Swiper custom styling for dark neon theme */
+/* Mobile-first fluid typography scale */
+:root {
+  --font-hero: clamp(2.05rem, 9.2vw, 5.25rem);
+  --font-section-title: clamp(1.5rem, 5.8vw, 3rem);
+  --font-card-title: clamp(1.05rem, 3.8vw, 1.25rem);
+}
+
+/* Smooth anchor scrolling with compact fixed-navbar offset */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 5.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Swiper custom styling for dark neon theme (compact mobile spacing) */
 .swiper-pagination {
   position: relative !important;
   bottom: 0 !important;
-  margin-top: 1.5rem !important;
+  margin-top: 0.85rem !important;
+}
+
+@media (min-width: 640px) {
+  .swiper-pagination {
+    margin-top: 1.25rem !important;
+  }
 }
 
 .swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.25) !important;
-  opacity: 0.8 !important;
-  transition: all 0.3s ease !important;
+  width: 7px !important;
+  height: 7px !important;
+  background: rgba(255, 255, 255, 0.28) !important;
+  opacity: 0.85 !important;
+  transition: all 0.25s ease !important;
 }
 
 .swiper-pagination-bullet-active {
   background: #CCFF00 !important;
-  width: 24px !important;
+  width: 22px !important;
   border-radius: 9999px !important;
-  box-shadow: 0 0 12px rgba(204, 255, 0, 0.6) !important;
+  box-shadow: 0 0 10px rgba(204, 255, 0, 0.55) !important;
 }
 
 /* Custom scrollbar hiding helper */

@@ -1,32 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script>
-      (function() {
-        try {
-          var originalFetch = window.fetch;
-          Object.defineProperty(window, 'fetch', {
-            configurable: true,
-            enumerable: true,
-            get: function() {
-              return originalFetch;
-            },
-            set: function(v) {
-              originalFetch = v;
-            }
-          });
-        } catch (e) {
-          console.warn('Could not patch window.fetch setter:', e);
-        }
-      })();
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NIWARA GYM | Luxury Fitness Club in Navi Peth, Pune</title>
+    <title>NIWARA GYM | Luxury Fitness Web Demo (WebCraft Portfolio)</title>
+    <meta name="description" content="Professional fitness website demo concept for Niwara Gym in Navi Peth, Pune. Modern strength arena, fitness diagnostics & luxury dark theme. Developed by WebCraft." />
+    <meta name="keywords" content="Niwara Gym, Gym Demo Project, WebCraft, Navi Peth Pune, Gym Website Demo, Luxury Fitness Landing Page" />
+    <meta name="theme-color" content="#0a0a0c" />
+    <link rel="canonical" href="https://niwaragym.netlify.app/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- OpenGraph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://niwaragym.netlify.app/" />
+    <meta property="og:title" content="NIWARA GYM | Luxury Fitness Web Demo" />
+    <meta property="og:description" content="Professional fitness website demo concept for Niwara Gym in Navi Peth, Pune by WebCraft." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:site_name" content="Niwara Gym Demo" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://niwaragym.netlify.app/" />
+    <meta name="twitter:title" content="NIWARA GYM | Luxury Fitness Web Demo" />
+    <meta name="twitter:description" content="Professional fitness website demo concept for Niwara Gym in Navi Peth, Pune by WebCraft." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" />
   </head>
-  <body>
+  <body class="bg-[#0a0a0c] text-zinc-100 antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

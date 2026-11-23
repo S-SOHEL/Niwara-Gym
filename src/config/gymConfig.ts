@@ -1,14 +1,38 @@
 import {
   GymInfo,
+  GymSectionsConfig,
+  ServiceItem,
   Review,
   GalleryImage
 } from '../types';
 
 export const GYM_CONFIG: GymInfo = {
   name: "NIWARA GYM",
-  brandSub: "LUXURY FITNESS CLUB",
+  brandSub: "LUXURY FITNESS CLUB • DEMO PROJECT",
   tagline: "FORGE YOUR LEGACY.",
   taglineSecondary: "Pune's elite fitness destination at Navi Peth. Scientific coaching, world-class equipment, and a high-performance community.",
+  isDemoProject: true,
+  demoDisclaimer: "This website is an agency portfolio demo concept created by WebCraft. Not an official client-authorized website.",
+  branding: {
+    name: "NIWARA GYM",
+    affiliation: "By V3 Fitness",
+    affiliationVerified: false,
+    tagline: "FORGE YOUR LEGACY.",
+    taglineSecondary: "Pune's elite fitness destination at Navi Peth. Scientific coaching, world-class equipment, and a high-performance community.",
+    headlinePrefix: "FORGE YOUR",
+    headlineHighlight: "LEGACY.",
+    badgeText: "DEMO PROJECT",
+    demoTag: "Demo Project",
+    classification: "Gym Demo Project"
+  },
+  sections: {
+    hero: true,
+    services: true,
+    gallery: true,
+    bmiCalculator: true,
+    testimonials: true,
+    contact: true
+  },
   address: {
     campus: "Niwara Campus",
     street: "96, Navi Peth, Thosarpaga",
@@ -24,10 +48,26 @@ export const GYM_CONFIG: GymInfo = {
     phoneSecondary: "+91 80101 55174",
     whatsappNumber: "918010155174",
     whatsappFormatted: "+91 80101 55174",
-    email: "contact@niwaragym.com",
-    instagram: "https://instagram.com/niwaragym",
-    facebook: "https://facebook.com/niwaragym",
-    youtube: "https://youtube.com/@niwaragym"
+    email: "demo@niwaragym.netlify.app",
+    instagram: "",
+    facebook: "",
+    youtube: "",
+    enableEnquiries: true,
+    phoneLabel: "WebCraft Agency Demo Desk (Not Official Reception)",
+    phoneDisclosure: "WebCraft agency demo sales & enquiry line (Not official gym reception)"
+  },
+  timing: {
+    weekdays: "05:30 AM – 10:30 PM",
+    sunday: "07:00 AM – 12:00 PM",
+    holidays: "Open on major holidays",
+    scheduleLabel: "Sample Operating Hours",
+    isVerified: false
+  },
+  seo: {
+    title: "NIWARA GYM | Luxury Fitness Web Demo (WebCraft Portfolio)",
+    description: "A luxury dark fitness web demo concept engineered by WebCraft as an agency portfolio demonstration for Niwara Gym Pune.",
+    canonicalUrl: "https://niwaragym.netlify.app/",
+    ogImage: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80"
   },
   googleRating: {
     score: 4.8,
@@ -35,23 +75,23 @@ export const GYM_CONFIG: GymInfo = {
     breakdown: {
       fiveStar: 498,
       fourStar: 42
-    }
-  },
-  timing: {
-    weekdays: "05:30 AM – 10:30 PM",
-    sunday: "07:00 AM – 12:00 PM",
-    holidays: "Open on major holidays"
+    },
+    isVerified: false,
+    displayLabel: "Concept Rating Showcase"
   },
   mapUrl: "https://maps.google.com/?q=Niwara+Gym+Navi+Peth+Pune",
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3553215682187!2d73.84752000000002!3d18.5128038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0612f000001%3A0x897914e6be01955d!2sNavi%20Peth%2C%20Sadashiv%20Peth%2C%20Pune%2C%20Maharashtra%20411030!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
-  directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Niwara+Gym+Navi+Peth+Pune+411030"
+  mapEmbedUrl: "https://maps.google.com/maps?q=Niwara+Campus,+96,+Navi+Peth,+Pune,+Maharashtra+411030&t=&z=16&ie=UTF8&iwloc=&output=embed",
+  directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Niwara+Gym+Navi+Peth+Pune+411030",
+  // Runtime production release is strictly undefined: no client authorization exists.
+  // Synthetic test fixtures are isolated in src/test/productionTestFixtures.ts.
+  productionRelease: undefined
 };
 
-export const SERVICES_LIST = [
+export const SERVICES_LIST: ServiceItem[] = [
   {
     id: "strength",
     title: "Strength Training",
-    description: "Biomechanical isolate plate-loaded machines and heavy dumbbell racks.",
+    sentence: "Biomechanical isolate plate-loaded machines and heavy dumbbell racks up to 50kg.",
     iconName: "Dumbbell",
     accentColor: "from-lime-400 to-emerald-500",
     image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80"
@@ -59,7 +99,7 @@ export const SERVICES_LIST = [
   {
     id: "weight-loss",
     title: "Weight Loss",
-    description: "Scientific fat loss, metabolic conditioning, and body recomposition.",
+    sentence: "Scientific fat loss, metabolic conditioning, and sustainable body recomposition.",
     iconName: "Flame",
     accentColor: "from-cyan-400 to-blue-500",
     image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
@@ -67,7 +107,7 @@ export const SERVICES_LIST = [
   {
     id: "personal-training",
     title: "Personal Training",
-    description: "1-on-1 certified coaching for rapid execution, form correction & results.",
+    sentence: "1-on-1 certified coaching for rapid goal execution, posture correction & results.",
     iconName: "UserCheck",
     accentColor: "from-purple-400 to-indigo-500",
     image: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80"
@@ -75,7 +115,7 @@ export const SERVICES_LIST = [
   {
     id: "functional",
     title: "Functional Training",
-    description: "Turf sprint track, sleds, battle ropes & crossfit conditioning rig.",
+    sentence: "Turf sprint track, sleds, battle ropes & high-intensity crossfit rig.",
     iconName: "Zap",
     accentColor: "from-amber-400 to-orange-500",
     image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80"
@@ -83,15 +123,15 @@ export const SERVICES_LIST = [
   {
     id: "cardio",
     title: "Cardio Deck",
-    description: "Commercial treadmills, stairmasters & assault bikes with heart-rate metrics.",
+    sentence: "Commercial treadmills, stairmasters & assault bikes with heart-rate tracking.",
     iconName: "Activity",
     accentColor: "from-emerald-400 to-teal-500",
-    image: "https://images.unsplash.com/photo-1576678927484-cc909957088c?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "steam-bath",
     title: "Steam Bath",
-    description: "Infrared steam & recovery lounge for deep muscle relaxation post-workout.",
+    sentence: "Infrared steam & recovery lounge for deep muscle relaxation post-workout.",
     iconName: "Sparkles",
     accentColor: "from-sky-400 to-cyan-500",
     image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
@@ -160,7 +200,7 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     id: "gal-3",
     title: "Cardio Suite",
     category: "Interior",
-    src: "https://images.unsplash.com/photo-1576678927484-cc909957088c?auto=format&fit=crop&w=1200&q=80",
+    src: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=1200&q=80",
     alt: "Treadmill Deck"
   },
   {
@@ -185,3 +225,25 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     alt: "Recovery Lounge"
   }
 ];
+
+export interface NavLinkItem {
+  name: string;
+  href: string;
+  sectionKey?: keyof GymSectionsConfig;
+}
+
+export const getActiveNavLinks = (sections = GYM_CONFIG.sections): { name: string; href: string }[] => {
+  const baseLinks: NavLinkItem[] = [
+    { name: 'Home', href: '#home', sectionKey: 'hero' },
+    { name: 'Services', href: '#services', sectionKey: 'services' },
+    { name: 'Gallery', href: '#gallery', sectionKey: 'gallery' },
+    { name: 'Calculator', href: '#bmi-calculator', sectionKey: 'bmiCalculator' },
+    { name: 'Reviews', href: '#reviews', sectionKey: 'testimonials' },
+    { name: 'Contact', href: '#contact', sectionKey: 'contact' },
+  ];
+
+  return baseLinks.filter((item) => {
+    if (!item.sectionKey) return true;
+    return sections?.[item.sectionKey] !== false;
+  }).map(({ name, href }) => ({ name, href }));
+};
